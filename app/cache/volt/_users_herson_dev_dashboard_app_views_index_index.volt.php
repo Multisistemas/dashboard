@@ -10,12 +10,12 @@
 			<small class="text-muted">Connect [your service] with your favorite social network</small>
 
 			
-<p>
+<!--p>
 <?php echo $this->tag->linkTo(array('session/loginOpauth/facebook', 'class' => 'btn btn-primary', '<i class="fa fa-facebook fa-3x"></i>')); ?>
 </p>
 <p>
 <?php echo $this->tag->linkTo(array('session/loginOpauth/twitter', 'class' => 'btn btn-primary', '<i class="fa fa-twitter fa-3x"></i>')); ?>
-</p>
+</p-->
 
 <p>
 <?php echo $this->tag->linkTo(array('session/loginOpauth/google', 'class' => 'btn btn-primary', '<i class="fa fa-google-plus fa-3x"></i>')); ?>

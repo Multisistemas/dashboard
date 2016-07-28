@@ -10,12 +10,12 @@
 			<small class="text-muted">Connect [your service] with your favorite social network</small>
 
 			
-<p>
+<!--p>
 {{link_to('session/loginOpauth/facebook','class':'btn btn-primary', '<i class="fa fa-facebook fa-3x"></i>')}}
 </p>
 <p>
 {{link_to('session/loginOpauth/twitter','class':'btn btn-primary', '<i class="fa fa-twitter fa-3x"></i>')}}
-</p>
+</p-->
 
 <p>
 {{link_to('session/loginOpauth/google','class':'btn btn-primary', '<i class="fa fa-google-plus fa-3x"></i>')}}

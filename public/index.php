@@ -1,6 +1,6 @@
 <?php
-
 error_reporting(E_ALL);
+(new Phalcon\Debug)->listen();
 
 try {
 
@@ -13,7 +13,7 @@ try {
 	 * Read auto-loader
 	 */
 	include __DIR__ . "/../app/config/loader.php";
-include __DIR__ . "/../app/config/routers.php";
+    include __DIR__ . "/../app/config/routers.php";
 
 	/**
 	 * Read services

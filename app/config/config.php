@@ -5,8 +5,8 @@ return new \Phalcon\Config(array(
 		'adapter'     => 'Mysql',
 		'host'        => 'localhost',
 		'username'    => 'root',
-		'password'    => 'qazwsx2013@',
-		'dbname'      => 'sendmail',
+		'password'    => 'toor',
+		'dbname'      => 'dashboard',
 	),
 	'application' => array(
 		'controllersDir' => __DIR__ . '/../../app/controllers/',
@@ -15,16 +15,16 @@ return new \Phalcon\Config(array(
 		'pluginsDir'     => __DIR__ . '/../../app/plugins/',
 		'libraryDir'     => __DIR__ . '/../../app/library/',
 		'cacheDir'       => __DIR__ . '/../../app/cache/volt/',
-		'baseUri'        => '/opauth/',
-		'publicUrl'      => '127.0.0.1/sendmail',
-		'debug'          => '0',
+		'baseUri'        => '/',
+		'publicUrl'      => 'dashboards.dev/sendmail',
+		'debug'          => '999999',
 	),
 	'opauth'=>array(
 
-		'path' => '/opauth/session/loginOpauth/',
-	    'callback_url' => 'http://localhost/opauth/session/success/',
+		'path' => '/session/loginOpauth/',
+	    'callback_url' => 'http://dashboard.dev/session/success/',
 	    //'callback_transport' => 'post',
-	    'security_salt' => 'LDFmiilYf8Fyw5W10aaaaarx4W1KsVrieQCnpBzzpTBWA5vJidQKDx8pMJbmw28R1C4m',
+	    'security_salt' => 'LHFmi1lYf3Fyw5W10a44aarx4W1KsVrieQCnpBzzpTBMA5vJidQKDo8pMJbmw22A1C8v',
 	    'debug' =>true,
 
  		'Strategy'=>array(
@@ -32,9 +32,9 @@ return new \Phalcon\Config(array(
 
 			),*/
 			'Google' =>array(
-				'client_id'		=>'378342860757-u41bhknu4mvt459gqkj451gt32gret8k.apps.googleusercontent.com',
-				'client_secret'	=>'nF0-qgZIt6IjlLzEPuTiZVaI',
-				'redectUrl' =>'http://opauth.duythien.com/session/abc',
+				'client_id'		=>'428910823408-6h9b8sajkoqbnvoi0ga7bu4pq0fk81bv.apps.googleusercontent.com',
+				'client_secret'	=>'gf0r10aAVr9u7KjPhe9K0u8Z',
+				'redectUrl' =>'http://dashboard.dev/session/abc',
 
 			),
 			/*'Twitter' =>array(
@@ -45,14 +45,14 @@ return new \Phalcon\Config(array(
 		),
 	),
 	'mail' => array(	
-                'fromName' => 'Phalcon Term',
-                'fromEmail' => 'fcopensuse@gmail.com',
+                'fromName' => 'Multisistemas Dashboard',
+                'fromEmail' => 'info@multisistemas.com.sv',
                 'smtp' => array(
-                        'server'	=> 'smtp.gmail.com',
+                        'server'	=> 'obsidian.websitewelcome.com',
                         'port' 		=> 465,
                         'security' => 'ssl',
-                        'username' => 'fcopensuse@gmail.com',
-                        'password' => 'mypass',
+                        'username' => 'info@multisistemas.com.sv',
+                        'password' => '%]gS1BMpGxU0',
                 )
         ),
 ));

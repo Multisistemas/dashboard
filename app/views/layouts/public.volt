@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      {{ link_to(null, 'class': 'brand', 'Sitepoint')}}
+      {{ link_to(null, 'class': 'brand', 'Multisistemas Dashboard')}}
         <div class="nav-collapse">
 
           <ul class="nav">
@@ -43,5 +43,5 @@ Made with love by the Phalcon Team
     {{ link_to("privacy", "Privacy Policy") }}
     {{ link_to("terms", "Terms") }}
 
-© 2013 Phalcon Team.
+© 2016 Multisistemas Team.
 </footer>

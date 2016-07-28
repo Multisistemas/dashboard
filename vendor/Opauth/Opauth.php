@@ -49,7 +49,7 @@ class Opauth{
 			'path' => '/',
 			'callback_url' => '{path}callback',
 			'callback_transport' => 'session',
-			'debug' => false,
+			'debug' => true,
 			
 			/**
 		 	* Security settings

@@ -38,8 +38,9 @@ class SessionController extends ControllerBase
     }
     public function loginOpauthAction()
     {
-       
         $this->session->set('opauth',$this->auth->login());
+         var_dump($this->auth);
+         $this->view->disable();
 
     }
     public function successAction()

@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <?php echo $this->tag->linkTo(array(null, 'class' => 'brand', 'Sitepoint')); ?>
+      <?php echo $this->tag->linkTo(array(null, 'class' => 'brand', 'Multisistemas Dashboard')); ?>
         <div class="nav-collapse">
 
           <ul class="nav"><?php $menus = array('Home' => null, 'Signup' => 'session/signup', 'Login' => 'session/loginOpauth'); ?><?php foreach ($menus as $key => $value) { ?>
@@ -31,5 +31,5 @@ Made with love by the Phalcon Team
     <?php echo $this->tag->linkTo(array('privacy', 'Privacy Policy')); ?>
     <?php echo $this->tag->linkTo(array('terms', 'Terms')); ?>
 
-© 2013 Phalcon Team.
+© 2016 Multisistemas Team.
 </footer>
