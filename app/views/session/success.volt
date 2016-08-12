@@ -1,47 +1,27 @@
 {{content()}}
 <div>
-
-<section>
-	<h2>Authentication sucessful</h2>
-	
-	<p>Authentication is successful and auth response is <span style="color: green; font-weight: bold;">validated</span>.</p>
-
-	<p>Returned auth response:</p>
-	
-	<table class="table">
-	<tbody>
-	<tr>
-		<th>Key</th>
-		<th>Value</th>
-	</tr>
-	{% for key,auth in auths['auth'] %}
-		{% if auth is scalar %}
-		<tr>
-		<th> {{key }}</th>
-		<th> {{auth}} </th>
-		</tr>
-		{% else %}
-			<tr>
-			<th> {{key}} </th>
-			<td><ul>
-			{% for key1,item in auth %}
-					{% if key1 is sameas('image') %}
-						<li><strong>{{key1}}</strong>:<img src="{{item}}" width="100" height="100"> </li>
-					{% elseif key1 == 'urls' %}
-						<li><strong>{{key1}}</strong>: {{item['google']}} </li>
-					{% else %}
-					<li><strong>{{key1}}</strong>: {{item}} </li>
-					{% endif %}
-			{% endfor %}
-			</ul></td>
-			</tr>
-		{% endif %}
-	{% endfor %}
-	</tbody>
-	</table>
-	<h2>Raw response</h2>
-		{{"<pre>"}}
-		<?php print_r($auths);?>
-      </section>
-		
+    <section>
+        {% if auths['auth']['raw']['gender'] == "male" %}
+           <h2>Bienvenido 
+        {% else %}
+           <h2>Bienvenida 
+        {% endif  %}
+        {{ auths['auth']['raw']['given_name'] }}</h2>
+        <p>A continuación encontrarás los enlaces a nuestros sistemas de información:</p>
+        
+        <table class="table">
+        <tbody>
+        <tr>
+        	<th>Enlace</th>
+        </tr>
+        {% for id,link in auths['modules'] %}
+        	{% if id is scalar %}
+        	<tr>
+        	<th> <a href='{{link}}'>{{id}}</a> </th>
+        	</tr>
+        	{% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    </section>
 </div>

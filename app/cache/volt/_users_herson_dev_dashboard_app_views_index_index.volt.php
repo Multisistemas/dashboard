@@ -5,9 +5,9 @@
 
 	<div class="container text-center">
 	<?php echo $this->tag->form(array('class' => 'form-signin')); ?>
-	    	<h2 class="form-signin-heading">Sign in</h2>
+	    	<h2 class="form-signin-heading">Iniciar sesión</h2>
 
-			<small class="text-muted">Connect [your service] with your favorite social network</small>
+			<small class="text-muted">Para ingresar al panel de control has click en el ícono de Google.</small>
 
 			
 <!--p>
@@ -22,7 +22,7 @@
 </p>
 
 
-<br><br>
+<!--br><br>
 
 
 		    <small class="text-muted">Or sign in with [your service]</small>
@@ -35,6 +35,6 @@
 
 	        <button class="btn btn-lg btn-primary btn-block btn-center" type="submit" data-bindattr-3="3">Sign in</button>
 	        <br>
-	        <small class="create-account text-muted">Dont have a [your service] or social network account? <button id="ember363" class="ember-view btn btn-sm btn-default"> Sign Up </button> </small>
+	        <small class="create-account text-muted">Dont have a [your service] or social network account? <button id="ember363" class="ember-view btn btn-sm btn-default"> Sign Up </button> </small-->
 	    </form>
     </div>	

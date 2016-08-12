@@ -1,4 +1,1 @@
-<?php
-
-var_dump($auth);
-?>
+../index/index.volt

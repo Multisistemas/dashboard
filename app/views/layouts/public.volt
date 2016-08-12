@@ -12,8 +12,7 @@
           <ul class="nav">
 
             {%- set menus = [
-              'Home': null,
-              'Signup': 'session/signup',
+              'Inicio': null,
               'Login' : 'session/loginOpauth'
             ] 
             -%}

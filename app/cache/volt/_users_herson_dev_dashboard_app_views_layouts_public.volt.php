@@ -9,7 +9,7 @@
       <?php echo $this->tag->linkTo(array(null, 'class' => 'brand', 'Multisistemas Dashboard')); ?>
         <div class="nav-collapse">
 
-          <ul class="nav"><?php $menus = array('Home' => null, 'Signup' => 'session/signup', 'Login' => 'session/loginOpauth'); ?><?php foreach ($menus as $key => $value) { ?>
+          <ul class="nav"><?php $menus = array('Inicio' => null, 'Login' => 'session/loginOpauth'); ?><?php foreach ($menus as $key => $value) { ?>
               <?php if ($value == $this->dispatcher->getControllerName()) { ?>
               <li class="active"><?php echo $this->tag->linkTo(array($value, ($key))); ?></li>
               <?php } else { ?>

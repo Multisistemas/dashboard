@@ -2,11 +2,30 @@
 
 class SessionController extends ControllerBase
 {
+    public function initialize()
+    {
+        $this->tag->setTitle('Sign Up/Sign In');
+        parent::initialize();
+    }
 
     public function indexAction()
     {
     	        echo "<h1>Hello!</h1>";
     }
+
+    /**
+     * Register an authenticated user into session data
+     *
+     * @param Users $user
+     */
+    private function _registerSession(Users $user)
+    {
+        $this->session->set('auth', array(
+            'id' => $user->id,
+            'name' => $user->name
+        ));
+    }
+
     public function signupAction()
     {
     	if ($this->request->isPost()) {
@@ -39,16 +58,40 @@ class SessionController extends ControllerBase
     public function loginOpauthAction()
     {
         $this->session->set('opauth',$this->auth->login());
+/*
          var_dump($this->auth);
          $this->view->disable();
+*/
 
     }
     public function successAction()
     {
+         $auths = $this->session->get('opauth');
+         if($auths['auth']['raw']['hd'] != 'multisistemas.com.sv')
+         {
+             $this->view->pick('session/invalid');
+             $this->view->message = "Only Multisistemas employees allowed!";
+         }
+         else
+         {
+             $this->view->pick('session/success');
+             $modules = array( 'modules' => array(
+                    'ERP: Entreprise Resources Planning' => 'https://mseicorp.com/erp',
+                    'DMS: Document Management System' => 'https://mseicorp.com/wiki',
+                    'LMS: Learning Management System' => 'https://mseicorp.com/lms',
+                    'Multisistemas Website' => 'http://multisistemas.com.sv',
+                    'Gestión Total Website' => 'http://gestiontotal.net',
+                    'Google Drive' => 'https://docs.multisistemas.com.sv',
+                    'Google Mail' => 'https://mail.google.com',
+             ));
+             $this->view->auths = array_merge($auths, $modules);
 
-         $this->view->auths = $this->session->get('opauth');
-         //var_dump($result);
-         //$this->view->disable();
+         }
+
+/*
+         var_dump($this->view->message);
+         $this->view->disable();
+*/
     }
 
     /**
@@ -90,6 +133,18 @@ class SessionController extends ControllerBase
                         $this->flash->error($message);
                 }
             }
+    }
+
+    /**
+     * Finishes the active session redirecting to the index
+     *
+     * @return unknown
+     */
+    public function endAction()
+    {
+        $this->session->remove('auth');
+        $this->flash->success('Goodbye!');
+        return $this->forward('index/index');
     }
 
 }
