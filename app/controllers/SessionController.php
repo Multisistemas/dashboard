@@ -81,7 +81,7 @@ class SessionController extends ControllerBase
                     'LMS: Learning Management System' => 'https://mseicorp.com/lms',
                     'Multisistemas Website' => 'http://multisistemas.com.sv',
                     'Gestión Total Website' => 'http://gestiontotal.net',
-                    'Google Drive' => 'https://docs.multisistemas.com.sv',
+                    'Google Drive' => 'http://docs.multisistemas.com.sv',
                     'Google Mail' => 'https://mail.google.com',
              ));
              $this->view->auths = array_merge($auths, $modules);
