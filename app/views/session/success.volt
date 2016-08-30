@@ -23,5 +23,20 @@
         {% endfor %}
         </tbody>
         </table>
+
+        <table class="table">
+        <tbody>
+        <tr>
+        	<th>Manuales</th>
+        </tr>
+        {% for id,link in auths['manuals'] %}
+        	{% if id is scalar %}
+        	<tr>
+        	<th> <a href='{{link}}'>{{id}}</a> </th>
+        	</tr>
+        	{% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
     </section>
 </div>

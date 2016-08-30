@@ -83,12 +83,15 @@ class SessionController extends ControllerBase
                     'Gestión Total Website' => 'http://gestiontotal.net',
                     'Google Drive' => 'http://docs.multisistemas.com.sv',
                     'Google Mail' => 'https://mail.google.com',
-                    '<h2>Manuales</h2>' => '#',
+             ));
+             
+             $manuals = array( 'manuals' => array(
                     'Manual de Usuario ERP' => 'http://manualdolibarr.com/guia-dolibarr37.php',
                     'Manual de Usuario DMS' => 'https://www.dokuwiki.org/start?id=es:manual',
                     'Guía rápida LMS' => 'https://docs.moodle.org/all/es/Gu%C3%ADa_r%C3%A1pida_del_usuario',
              ));
-             $this->view->auths = array_merge($auths, $modules);
+
+             $this->view->auths = array_merge($auths, $modules, $manuals);
 
          }
 

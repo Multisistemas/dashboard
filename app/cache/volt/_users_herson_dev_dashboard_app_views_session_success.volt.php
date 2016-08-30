@@ -23,5 +23,20 @@
         <?php } ?>
         </tbody>
         </table>
+
+        <table class="table">
+        <tbody>
+        <tr>
+        	<th>Manuales</th>
+        </tr>
+        <?php foreach ($auths['manuals'] as $id => $link) { ?>
+        	<?php if (is_scalar($id)) { ?>
+        	<tr>
+        	<th> <a href='<?php echo $link; ?>'><?php echo $id; ?></a> </th>
+        	</tr>
+        	<?php } ?>
+        <?php } ?>
+        </tbody>
+        </table>
     </section>
 </div>
