@@ -1,24 +1,24 @@
 
-<?php echo $this->getContent(); ?>
+<?= $this->getContent() ?>
 <div class="container">
       
 
 	<div class="container text-center">
-	<?php echo $this->tag->form(array('class' => 'form-signin')); ?>
+	<?= $this->tag->form(['class' => 'form-signin']) ?>
 	    	<h2 class="form-signin-heading">Iniciar sesión</h2>
 
 			<small class="text-muted">Para ingresar al panel de control has click en el ícono de Google.</small>
 
 			
 <!--p>
-<?php echo $this->tag->linkTo(array('session/loginOpauth/facebook', 'class' => 'btn btn-primary', '<i class="fa fa-facebook fa-3x"></i>')); ?>
+<?= $this->tag->linkTo(['session/loginOpauth/facebook', 'class' => 'btn btn-primary', '<i class="fa fa-facebook fa-3x"></i>']) ?>
 </p>
 <p>
-<?php echo $this->tag->linkTo(array('session/loginOpauth/twitter', 'class' => 'btn btn-primary', '<i class="fa fa-twitter fa-3x"></i>')); ?>
+<?= $this->tag->linkTo(['session/loginOpauth/twitter', 'class' => 'btn btn-primary', '<i class="fa fa-twitter fa-3x"></i>']) ?>
 </p-->
 
 <p>
-<?php echo $this->tag->linkTo(array('session/loginOpauth/google', 'class' => 'btn btn-primary', '<i class="fa fa-google-plus fa-3x"></i>')); ?>
+<?= $this->tag->linkTo(['session/loginOpauth/google', 'class' => 'btn btn-primary', '<i class="fa fa-google-plus fa-3x"></i>']) ?>
 </p>
 
 

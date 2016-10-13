@@ -1,42 +1,43 @@
-<?php echo $this->getContent(); ?>
+<?= $this->getContent() ?>
 <div>
     <section>
-        <?php if ($auths['auth']['raw']['gender'] == 'male') { ?>
-           <h2>Bienvenido 
-        <?php } else { ?>
+        <?php if ($auths['auth']['raw']['gender'] == 'female') { ?>
            <h2>Bienvenida 
+        <?php } else { ?>
+           <h2>Bienvenido 
         <?php } ?>
-        <?php echo $auths['auth']['raw']['given_name']; ?></h2>
+        <?= $auths['auth']['raw']['given_name'] ?></h2>
         <p>A continuación encontrarás los enlaces a nuestros sistemas de información:</p>
-        
-        <table class="table">
-        <tbody>
-        <tr>
-        	<th>Enlace</th>
-        </tr>
+		<h4>Enlaces</h4>
+        <div class="bs-glyphicons"> 
+        <ul class="bs-glyphicons-list">
         <?php foreach ($auths['modules'] as $id => $link) { ?>
         	<?php if (is_scalar($id)) { ?>
-        	<tr>
-        	<th> <a href='<?php echo $link; ?>'><?php echo $id; ?></a> </th>
-        	</tr>
+        	<a href='<?= $link ?>'>
+        	<li>
+        		 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 
+        		 <span class="glyphicon-class"><?= $id ?></span>
+        	</li>
+        	</a>
         	<?php } ?>
         <?php } ?>
-        </tbody>
-        </table>
-
-        <table class="table">
-        <tbody>
-        <tr>
-        	<th>Manuales</th>
-        </tr>
+        </ul>
+        </div>
+		
+		<h4>Manuales</h4>
+        <div class="bs-glyphicons"> 
+        <ul class="bs-glyphicons-list">
         <?php foreach ($auths['manuals'] as $id => $link) { ?>
         	<?php if (is_scalar($id)) { ?>
-        	<tr>
-        	<th> <a href='<?php echo $link; ?>'><?php echo $id; ?></a> </th>
-        	</tr>
+        	<a href='<?= $link ?>'>
+        	<li>
+        		 <span class="glyphicon glyphicon-book" aria-hidden="true"></span> 
+        		 <span class="glyphicon-class"><?= $id ?></span>
+        	</li>
+        	</a>
         	<?php } ?>
         <?php } ?>
-        </tbody>
-        </table>
+        </ul>
+        </div>
     </section>
 </div>

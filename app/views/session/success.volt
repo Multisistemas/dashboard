@@ -1,42 +1,43 @@
 {{content()}}
 <div>
     <section>
-        {% if auths['auth']['raw']['gender'] == "male" %}
-           <h2>Bienvenido 
-        {% else %}
+        {% if auths['auth']['raw']['gender'] == "female" %}
            <h2>Bienvenida 
+        {% else %}
+           <h2>Bienvenido 
         {% endif  %}
         {{ auths['auth']['raw']['given_name'] }}</h2>
         <p>A continuación encontrarás los enlaces a nuestros sistemas de información:</p>
-        
-        <table class="table">
-        <tbody>
-        <tr>
-        	<th>Enlace</th>
-        </tr>
+		<h4>Enlaces</h4>
+        <div class="bs-glyphicons"> 
+        <ul class="bs-glyphicons-list">
         {% for id,link in auths['modules'] %}
         	{% if id is scalar %}
-        	<tr>
-        	<th> <a href='{{link}}'>{{id}}</a> </th>
-        	</tr>
+        	<a href='{{link}}'>
+        	<li>
+        		 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> 
+        		 <span class="glyphicon-class">{{id}}</span>
+        	</li>
+        	</a>
         	{% endif %}
         {% endfor %}
-        </tbody>
-        </table>
-
-        <table class="table">
-        <tbody>
-        <tr>
-        	<th>Manuales</th>
-        </tr>
+        </ul>
+        </div>
+		
+		<h4>Manuales</h4>
+        <div class="bs-glyphicons"> 
+        <ul class="bs-glyphicons-list">
         {% for id,link in auths['manuals'] %}
         	{% if id is scalar %}
-        	<tr>
-        	<th> <a href='{{link}}'>{{id}}</a> </th>
-        	</tr>
+        	<a href='{{link}}'>
+        	<li>
+        		 <span class="glyphicon glyphicon-book" aria-hidden="true"></span> 
+        		 <span class="glyphicon-class">{{id}}</span>
+        	</li>
+        	</a>
         	{% endif %}
         {% endfor %}
-        </tbody>
-        </table>
+        </ul>
+        </div>
     </section>
 </div>
